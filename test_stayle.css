@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.hid {
+    width: 70%;
+    height: 60px;
+    padding: 10px;
+    padding-left: 60px;
+    position: relative;
+    z-index: 10;
+    perspective: 1000px;
+    background: linear-gradient(to right,rgba(0, 142, 236, 0.815),#000,rgba(0, 142, 236, 0.815));
+    box-shadow: 0 0 30px rgba(0, 142, 236, 0.815),
+    inset 0 0 15px rgba(0, 142, 236, 0.815);
+    border: 1px solid rgba(0, 142, 236, 0.815);
+    position: fixed;
+    left:15%;
+    border-radius:10px;
+    margin-top:10px;
+    flex-wrap:nowrap;
+}
+
+.logo{
+  width: 300px;
+  height: 40px;
+  color: white;
+  white-space: nowrap;
+  transform: scale(1.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left:40%
+}
+.logo span{
+  color:rgba(0, 142, 236, 0.815);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#000;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;          /* مغلقة */
+  height: 70%;
+  background: #000;
+  color:white;
+  padding-top: 0px;
+  transition: 0.4s ease;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 142, 236, 0.815),
+  inset 0 0 15px rgba(0, 142, 236, 0.815);
+  border: 1px solid rgba(0, 142, 236, 0.89);
+  margin-top: 100px;
+  border-radius:10px;
+  margin-left:10px;
+}
+.sidebar.open {
+  width: 160px; 
+  height: 70%;       /* مفتوحة */
+  border-radius:10px;
+  margin-left:10px;
+}
+
+.toggle-btn {
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0px;
+  text-align: center;
+  color: white;
+  background-color:rgba(0, 142, 236, 0.815);
+  margin-top: 0px;
+
+}
+.menu {
+  list-style: none;
+  padding: 0px;
+  margin-top: 0px;
+  transition: 0.4s ease;
+
+}
+
+.menu li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.menu li:hover {
+  font-size: 18px;
+  background-color: rgba(111, 203, 248, 0.81);
+  transform: scale(1.1);
+}
+.menu li span {
+  opacity: 0;
+  transition: 0.3s;
+  color:white
+}
+.menu a{
+  text-decoration: none;
+}
+
+.sidebar.open .menu li span {
+  opacity: 1;
+}
+
+
+
+.text-animation{
+  font-size: 45px;
+  font-weight: 600;
+  min-width: 680PX;
+  color: white;
+  top:50%;
+  position: absolute;
+  margin-right:200px;
+}
+.text-animation span{
+  position: relative;
+  color:#ffffff
+}
+.text-animation span::before{
+  content: "administration windows";
+  color: rgba(0, 142, 236, 0.815);
+  animation: words 20s infinite;
+}
+.text-animation span::after{
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid  rgba(0, 142, 236, 0.815);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+  to{
+    border-left: 2px solid  rgba(0, 142, 236, 0.815);
+  }
+}
+@keyframes words{
+  0%,
+  20%{
+    content: "administration windows";
+  }
+  21%,
+  40%{
+    content: "administration linux";
+  }
+  41%,
+  60%{
+    content: "réseaux informatique";
+  }
+  61%,
+  80%{
+    content: "security";
+  }
+  81%,
+  100%{
+    content: "administration linux";
+  }
+}
+@keyframes typing{
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95%{
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%{
+    width: calc(100% + 8px);
+  }
+}
+
+
